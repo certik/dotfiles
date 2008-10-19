@@ -1,0 +1,18 @@
+[user]
+	name = Ondrej Certik
+	email = ondrej@certik.cz
+
+[color]
+    diff  = auto
+    status= auto
+    branch= auto
+    interactive = true
+
+[alias]
+    ci = commit
+    di = diff --color-words
+    st = status
+    co = checkout
+
+[sendemail]
+    to = sympy-patches@googlegroups.com
