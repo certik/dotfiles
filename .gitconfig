@@ -13,4 +13,4 @@
     di = diff --color-words
     st = status
     co = checkout
-    gl = log --oneline --graph
+    gl = log --decorate --oneline --graph
