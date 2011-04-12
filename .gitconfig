@@ -1,6 +1,6 @@
 [user]
-	name = Ondrej Certik
-	email = ondrej@certik.cz
+    name = Ondrej Certik
+    email = ondrej@certik.cz
 
 [color]
     diff  = auto
@@ -13,6 +13,4 @@
     di = diff --color-words
     st = status
     co = checkout
-
-[sendemail]
-    to = sympy-patches@googlegroups.com
+    gl = log --oneline --graph
