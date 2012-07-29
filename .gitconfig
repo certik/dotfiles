@@ -1,6 +1,7 @@
 [user]
     name = Ondrej Certik
-    email = ondrej@certik.cz
+#    email = ondrej@certik.cz
+    email = ondrej.certik@gmail.com
 
 [color]
     diff  = auto
@@ -14,3 +15,6 @@
     st = status
     co = checkout
     gl = log --decorate --oneline --graph
+    st2 = status -uno
+    targz = !git archive --prefix=`basename $PWD`/ master | gzip > `basename $PWD`.tar.gz
+    targz2 = !git archive --prefix=`basename $PWD`/ master | gzip > `basename $PWD`_tar_gz
