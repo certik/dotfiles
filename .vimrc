@@ -1,4 +1,5 @@
 syn on
+set modeline
 set exrc
 set autowrite
 set tabstop=4
@@ -23,3 +24,5 @@ else
    hi WhiteSpaceEOL ctermbg=Red
 endif
 match WhitespaceEOL /\s\+\%#\@<!$/
+
+au Bufenter *.f90 set comments=:!
