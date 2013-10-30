@@ -1,3 +1,6 @@
+[core]
+    editor = vim
+
 [user]
     name = Ondřej Čertík
 #    email = ondrej@certik.cz
