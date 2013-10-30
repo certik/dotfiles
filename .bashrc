@@ -1,3 +1,11 @@
+#############
+# NOTE: The only essential part is to show git branch:
+#
+# PS1='${debian_chroot:+($debian_chroot)}\[\033[01;34m\]\w\[\033[00m\]\[\033[0;31m\]$(__git_ps1 "(%s)")\[\033[0;00m\]\$ '
+#
+# For the rest, just use the default system bashrc (copy & paste the above
+# line).
+#
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
