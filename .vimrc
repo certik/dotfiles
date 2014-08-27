@@ -16,6 +16,10 @@ map <F8> :TlistToggle<CR><C-w>h
 let Tlist_Inc_Winwidth=0
 set fileencodings=ucs-bom,utf-8,default,latin2
 
+"This unsets the "last search pattern" register by hitting return, taken from:
+"http://stackoverflow.com/questions/657447/vim-clear-last-search-highlighting
+nnoremap <silent> <CR> :nohlsearch<CR><CR>
+
 au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
 
 if has('gui_running')
