@@ -30,3 +30,6 @@ endif
 match WhitespaceEOL /\s\+\%#\@<!$/
 
 au Bufenter *.f90 set comments=:!
+
+let proj = findfile(".project.vim",".;")
+if proj != ""|exec "source " . proj|endif
