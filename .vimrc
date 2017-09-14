@@ -11,6 +11,8 @@ set expandtab
 set autoindent
 filetype indent on
 map <F2> :w<CR>
+execute "set <M-s>=\es"
+map <M-s> :w<CR>
 map <F10> :!/usr/bin/env python %<CR>
 map <F8> :TlistToggle<CR><C-w>h
 let Tlist_Inc_Winwidth=0
@@ -30,6 +32,12 @@ endif
 match WhitespaceEOL /\s\+\%#\@<!$/
 
 au Bufenter *.f90 set comments=:!
+
+" To change from 4 spaces indenting to 2 spaces, put a `.project.vim` file into
+" the root of the repository with the following content:
+"set tabstop=2
+"set shiftwidth=2
+"set softtabstop=2
 
 let proj = findfile(".project.vim",".;")
 if proj != ""|exec "source " . proj|endif
