@@ -15,14 +15,15 @@
 [alias]
     ci = commit
     di = diff --color-words
-    st = status
+    st = status --ignored
     co = checkout
     gl = log --decorate --oneline --graph
     st2 = status -uno
     targz = !git archive --prefix=`basename $PWD`/ master | gzip > `basename $PWD`.tar.gz
     targz2 = !git archive --prefix=`basename $PWD`/ master | gzip > `basename $PWD`_tar_gz
     # Use this as follows: git sed old_method_name new_method_name
-    sed = !cd ${GIT_PREFIX:-.} && sh -c 'git grep -l \"$1\" | xargs sed -i \"s/$1/$2/g\"' -
+    sed = !sh -c 'git grep --null --full-name --name-only --perl-regexp -e \"$1\" | xargs -0 perl -i -p -e \"s/$1/$2/g\"' -
     pr-github = !sh -c 'git fetch origin pull/$1/head:pr-$1 && git checkout pr-$1' -
     pr-bitbucket = !sh -c 'git fetch origin pull-requests/$1/from:pr-$1 && git checkout pr-$1' -
     pr-gitlab = !sh -c 'git fetch origin merge-requests/$1/head:pr-$1 && git checkout pr-$1' -
+    mr = !sh -c 'git fetch $1 merge-requests/$2/head:mr-$1-$2 && git checkout mr-$1-$2' -
