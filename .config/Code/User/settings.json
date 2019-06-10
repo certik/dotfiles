@@ -1,0 +1,21 @@
+{
+    "telemetry.enableTelemetry": false,
+    "files.autoSave": "onFocusChange",
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "files.associations": {
+        "*.cuf": "FortranFreeForm"
+    },
+    "editor.rulers": [
+        80
+    ],
+    "terminal.integrated.fontSize": 16,
+    "terminal.integrated.fontFamily": "Ubuntu mono",
+    "latex-workshop.view.pdf.viewer": "tab",
+    "fortran.linterEnabled": false,
+    "fortran.gfortranExecutable": "",
+    "keyboard.dispatch": "keyCode",
+    "python.linting.pylintEnabled": false,
+    "window.titleBarStyle": "custom",
+    "window.zoomLevel": 0
+}
