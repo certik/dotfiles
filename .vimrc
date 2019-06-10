@@ -17,6 +17,7 @@ map <F10> :!/usr/bin/env python %<CR>
 map <F8> :TlistToggle<CR><C-w>h
 let Tlist_Inc_Winwidth=0
 set fileencodings=ucs-bom,utf-8,default,latin2
+set nojoinspaces
 
 "This unsets the "last search pattern" register by hitting return, taken from:
 "http://stackoverflow.com/questions/657447/vim-clear-last-search-highlighting
