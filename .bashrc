@@ -123,3 +123,5 @@ fi
 #pgrep xcape > /dev/null || xcape -e 'Caps_Lock=Escape'
 
 PROMPT_DIRTRIM=2
+
+export CTEST_PARALLEL_LEVEL=4
