@@ -8,9 +8,9 @@ case $- in
       *) return;;
 esac
 
-if command -v tmux>/dev/null; then
-    [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux
-fi
+#if command -v tmux>/dev/null; then
+#    [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && [ ! $NOTMUX ] && exec tmux
+#fi
 
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
@@ -120,6 +120,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-pgrep xcape > /dev/null || xcape -e 'Caps_Lock=Escape'
+#pgrep xcape > /dev/null || xcape -e 'Caps_Lock=Escape'
 
 PROMPT_DIRTRIM=2
