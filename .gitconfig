@@ -30,3 +30,6 @@
     up = !git pull --rebase --prune $@ && git remote update -p
     bdone = "!f() { git checkout ${1-master} && git up && git bclean ${1-master}; }; f"
     prune-branches = !git branch --merged master | grep -v '^[ *]*master$' | xargs git branch -d
+    automerge = push -o merge_request.create -o merge_request.merge_when_pipeline_succeeds -o merge_request.remove_source_branch
+    createmr = !sh -c 'git push $1 $2 -o merge_request.create -o merge_request.remove_source_branch -o merge_request.title="$3"'
+    #-o merge_request.description="The description I want"
