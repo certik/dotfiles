@@ -5,6 +5,10 @@ set shiftwidth=4
 set softtabstop=4
 set expandtab
 
+"It's hard to read the current search position:
+"https://github.com/neovim/neovim/issues/4600
+set nohlsearch
+
 map <M-s> :w<CR>
 
 "Autosave if buffer is modified and focus is lost
