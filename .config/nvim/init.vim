@@ -1,9 +1,9 @@
 set autowrite
 set tabstop=4
 set shiftwidth=4
-
 set softtabstop=4
 set expandtab
+set textwidth=79
 
 "It's hard to read the current search position:
 "https://github.com/neovim/neovim/issues/4600
