@@ -11,6 +11,9 @@ zstyle ':vcs_info:git:*' formats '%F{green}(%b)%f'
 setopt PROMPT_SUBST
 PROMPT='%F{blue}%2~%f${vcs_info_msg_0_} $ '
 
+# load autocompletion
+autoload -Uz compinit && compinit
+
 # Color ls
 export CLICOLOR=1
 alias ll="ls -l"
