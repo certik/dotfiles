@@ -1,5 +1,13 @@
 # For more ideas from Vim, see https://github.com/LGUG2Z/helix-vim/blob/59b56365f0d54dba15026b4c51969b5fd4da5c98/config.toml
 
+[editor]
+auto-save = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
 [keys.normal]
 0 = "goto_line_start"
 "$" = "goto_line_end"
@@ -11,6 +19,7 @@ D = ["extend_to_line_end", "yank_main_selection_to_clipboard", "delete_selection
 Z = { Z = [":write-quit"] }
 p = ["paste_clipboard_after", "collapse_selection"]
 P = ["paste_clipboard_before", "collapse_selection"]
+"*" = ["select_mode", "extend_next_word_start", "normal_mode", "search_selection", "search_next"]
 
 [keys.normal.y]
 y = ["extend_to_line_bounds", "yank_main_selection_to_clipboard", "normal_mode", "collapse_selection"]
