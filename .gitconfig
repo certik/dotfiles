@@ -17,6 +17,7 @@
     di = diff --color-words
     st = status --ignored
     co = checkout
+    co-gh = "!bash -c ': git branch ; if [ \"$#\" -eq 1 ] && echo \"$1\" | grep -qE \"^[^/:]+:.+\\$\"; then IFS=: read -r remote branch <<<\"$1\"; origin_url=$(git remote get-url origin); repo_name=$(basename -s .git \"$origin_url\"); git remote get-url \"$remote\" 2>/dev/null || git remote add \"$remote\" \"git@github.com:$remote/$repo_name.git\"; if git fetch \"$remote\" \"$branch\"; then local_branch=\"${remote}-${branch//\\//-}\"; git show-ref --verify --quiet \"refs/heads/$local_branch\" && git checkout \"$local_branch\" || git checkout -b \"$local_branch\" \"$remote/$branch\"; else echo \"Error: Remote branch $remote:$branch not found.\"; fi; else git checkout \"$@\"; fi' -"
     gl = log --decorate --oneline --graph
     st2 = status -uno
     targz = !git archive --prefix=`basename $PWD`/ master | gzip > `basename $PWD`.tar.gz
