@@ -9,7 +9,7 @@ zstyle ':vcs_info:git:*' formats '%F{green}(%b)%f'
 
 # set up the prompt
 setopt PROMPT_SUBST
-PROMPT='%F{blue}%2~%f${vcs_info_msg_0_} $ '
+PROMPT='%F{blue}%2~%f${vcs_info_msg_0_}$ '
 
 # load autocompletion
 autoload -Uz compinit && compinit
